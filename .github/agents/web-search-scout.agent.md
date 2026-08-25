@@ -1,6 +1,6 @@
 ---
 name: "Web Search Scout"
-description: "Runs 1–5 bx searches for a given research topic and returns a ranked list of relevant URLs with metadata. Used exclusively as a subagent by Web Research Orchestrator — not intended for direct user invocation. See the bx-query-strategies skill for query construction techniques."
+description: "Runs 1–5 bx searches for a given research topic and returns a ranked list of relevant URLs with metadata. Used exclusively as a subagent by Web Research Orchestrator — not intended for direct user invocation. See the web-search skill (.github/skills/web-search/) for query construction techniques (bx, ddgs, and search strategy)."
 tools: [execute/runInTerminal, execute/getTerminalOutput]
 user-invocable: false
 argument-hint: "Provide: (1) Research topic/question, (2) Optional constraints — freshness (e.g. 'past week'), preferred domains (e.g. 'prefer sifted.eu, techcrunch.com'), excluded domains, or scope (broad/focused/technical/news)."
@@ -25,7 +25,7 @@ Constraints: [optional — freshness, preferred domains, excluded domains, scope
 
 ### 1. Start with one core query
 
-Design a single strong opening query that directly addresses the topic. Run it immediately — do not plan all queries upfront. Refer to the **`bx-query-strategies`** skill for query construction techniques: boolean logic, domain targeting, content operators, freshness flags, goggles, use-case recipes and adaptive search patterns.
+Design a single strong opening query that directly addresses the topic. Run it immediately — do not plan all queries upfront. Refer to the **`web-search`** skill (`.github/skills/web-search/`) for query construction techniques: boolean logic, domain targeting, content operators, freshness flags, goggles, use-case recipes and adaptive search patterns.
 
 ```bash
 bx web "QUERY" 2>&1

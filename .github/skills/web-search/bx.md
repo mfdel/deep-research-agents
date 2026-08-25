@@ -105,7 +105,7 @@ Control output size for context (the default command):
 | `--context-threshold-mode` | `--threshold` | balanced | Relevance: `strict`, `balanced`, `lenient` |
 
 ```bash
-bx "topic" --max-tokens 4096 --max-tokens-per-url 1024 --max-urls 5 --threshold strict
+bx "topic" --max-tokens 10000 --max-tokens-per-url 1024 --max-urls 20 --threshold strict
 ```
 
 ## Goggles — Custom Ranking
